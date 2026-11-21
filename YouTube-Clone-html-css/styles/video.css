@@ -1,0 +1,124 @@
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+    padding: 24px;
+}
+
+@media (max-width: 1190px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 895px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.video-preview {
+    position: relative;
+}
+
+.timeline {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    color: white;
+    background-color: black;
+    font-size: 12px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.video {
+    margin-bottom: 50px; 
+}
+
+.info-row {
+    display: flex;
+    margin-top: 10px;
+}
+
+.channel-profile-picture {
+    width: 36px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.channel-picture {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.channel-picture:hover .pop-up-channel-info{
+    opacity: 1;
+
+}
+
+.pop-up-channel-info {
+    position: absolute;
+    width: 203px;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 0 6px rgba(0,0,0,0.20);
+    border-radius: 4px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.15s;
+} 
+
+.pop-up-channel-picture {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.creator-info {
+    flex: 1;
+}
+
+.pop-up-channel-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.pop-up-channel-subscribers {
+    font-size: 13px;
+    color: rgb(103, 103, 103);
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.channel-name,
+.video-stats {
+    font-size: 12px;
+    color: gray;
+}
+
